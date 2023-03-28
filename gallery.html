@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My gallery</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<style type="text/css">
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin: 0 -10px;
+		}
+		.gallery-item {
+			flex-basis: calc(33.333% - 20px);
+			margin: 10px;
+			cursor: pointer;
+			overflow: hidden;
+			position: relative;
+		}
+		.gallery-item img {
+			width: 100%;
+			height: auto;
+			transition: transform 0.3s ease;
+		}
+		.gallery-item:hover img {
+			transform: scale(1.1);
+		}
+        .gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center; /* Tengahkan tulisan */
+  font-weight: bold; /* Tambahkan efek tebal pada tulisan */
+  font-size: 15px; /* Tentukan ukuran font */
+  line-height: 1.5; /* Atur jarak antar baris */
+}
+
+		.gallery-item:hover .caption {
+			opacity: 1;
+		}
+        body{
+  height:100vh;
+  margin: 0;
+  --x: calc(var(--posX, 0) * 1px);
+  --y: calc(var(--posY, 0) * 1px);
+  background-image: 
+    linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)), 
+    radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
+    radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
+    radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
+    radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
+    linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+  background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+}
+
+        
+	</style>
+</head>
+<body>
+	<div class="gallery">
+		<div class="gallery-item">
+			<a data-fancybox="gallery" href="img/p1.jpg">
+				<img src="img/p1.jpg" alt="">
+				<div class="caption">With my parent❤ | 28/12/2022 </div>
+			</a>
+		</div>
+		<div class="gallery-item">
+			<a data-fancybox="gallery" href="img/p2.jpg">
+				<img src="img/p2.jpg" alt="">
+				<div class="caption">FIK day😎| 08/11/2022</div>
+			</a>
+		</div>
+		<div class="gallery-item">
+			<a data-fancybox="gallery" href="img/p3.jpg">
+				<img src="img/p3.jpg"alt="">
+				<div class="caption">Service work😃 | 26/02/2023</div>
+			</a>
+		</div>
+		<div class="gallery-item">
+			<a data-fancybox="gallery" href="img/p4.jpg">
+				<img src="img/p4.jpg" alt="">
+				<div class="caption">Campus day🕺 | 03/11/2022</div>
+			</a>
+		</div>
+		<div class="gallery-item">
+			<a data-fancybox="gallery" href="img/p5.jpg">
+				<img src="img/p5.jpg"alt="">
+				<div class="caption">Choir Music Festival🎼 | 22/10/2022</div>
+			</a>
+		</div>
+		<div class="gallery-item">
+			<a data-fancybox="gallery" href="img/p6.jpg">
+				<img src="img/p6.jpg" alt="">
+				<div class="caption">Fun Match⚽️ | 27/08/2022</div>
+			</a>
+		</div>
+
+        
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        
+        <!-- Script -->
+        <script>
+            $('[data-fancybox="gallery"]').fancybox({
+                thumbs : {
+                    autoStart : true
+                }
+            });
+            document.body.addEventListener("pointermove", (e)=>{
+  const { currentTarget: el, clientX: x, clientY: y } = e;
+  const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+  el.style.setProperty('--posX',  x-l-w/2);
+  el.style.setProperty('--posY',  y-t-h/2);
+})
+        </script>
+</body>
+</html>        

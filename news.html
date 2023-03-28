@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Berita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        article {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 10px;
+        }
+        
+        p {
+            font-size: 16px;
+            margin: 0 0 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .read-more a {
+            color: #fff;
+            background-color: #428bca;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        .read-more a:hover {
+            background-color: #3071a9;
+        }
+        
+        footer {
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            margin-top: 40px;
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 50px; color: green; font-weight: bold; font-family: Calbri; border-bottom: 4px solid #333; padding-bottom: 10px;">Halaman Berita</h1>
+    </header>
+    <main>
+        <article>
+            <h2 style="font-size: 40px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Eksotisme Pulau Banda Naira di Maluku, Destinasi Wisata yang Wajib Dikunjungi</h2>
+            <p style="font-weight: bold;">Timur indonesia | Maluku</p>
+            <img src="img/banda.jpg" alt="Gambar Berita">
+            <p style="font-weight: bold; font-size: 15px;">Keindahan benteng dan pulau banda dari atas</p>
+            <p style="font-size: 20px;"> Indonesia kaya akan keindahan alamnya. Salah satu destinasi wisata alam yang menarik adalah Pulau Banda Naira di Maluku. Terletak di tengah Laut Banda, pulau ini menawarkan pemandangan yang memesona dan keindahan yang tiada tara.</p>
+            <p style="font-size: 20px;"> Pulau Banda Naira memiliki keindahan alam yang masih asli dan terjaga dengan baik. Di sana, wisatawan dapat menikmati panorama indah dari pantai berpasir putih yang memikat hati. Terumbu karang yang mempesona juga dapat dilihat dengan jelas dari pantai, dengan keberagaman ikan dan terumbu karang yang menawan.</p>
+            <div class="read-more">
+                <a href="#" id="read-more-link">Read more</a>
+</div>
+<div id="additional-content" style="display: none;">
+<p style="font-size: 20px;"> Selain itu, wisatawan dapat mengunjungi gunung berapi Banda Api yang ada di Pulau Banda Besar. Gunung ini memiliki keindahan yang sangat menakjubkan, terutama saat matahari terbit dan tenggelam. Di sekitar gunung juga terdapat kebun pala yang menjadi sumber kekayaan masyarakat Banda Naira.</p>
+<p style="font-size: 20px;"> Tidak hanya keindahan alamnya saja yang menarik, Pulau Banda Naira juga memiliki sejarah yang sangat kaya. Pulau ini menjadi pusat perdagangan rempah-rempah di Indonesia pada masa lalu. Di sana, wisatawan dapat mengunjungi Benteng Belgica, bekas benteng peninggalan masa penjajahan Belanda yang masih berdiri kokoh hingga saat ini.</p>
+<p style="font-size: 20px;">Bagi para pecinta wisata kuliner, Pulau Banda Naira juga menawarkan masakan khas Maluku yang sangat lezat. Rempah-rempah yang dihasilkan dari pulau ini membuat masakan yang disajikan memiliki cita rasa yang khas dan autentik.</p>
+<p style="font-size: 20px;">Jadi, bagi Anda yang ingin merasakan keindahan alam, sejarah dan kekayaan kuliner Indonesia, Pulau Banda Naira di Maluku adalah tempat yang harus dikunjungi.</p>
+</div>
+</article>
+</main>
+<footer>
+© Ogi wemy | News
+</footer>
+<script>
+    const readMoreLink = document.getElementById('read-more-link');
+    const additionalContent = document.getElementById('additional-content');
+
+    readMoreLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        additionalContent.style.display = 'block';
+        readMoreLink.style.display = 'none';
+    });
+</script>
+</body>
+</html>

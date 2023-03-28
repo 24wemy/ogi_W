@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      nav {
+        background-color: #302d2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 100px;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      nav li {
+        margin: 0 10px;
+      }
+      nav a {
+        color: #fffefe;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+      }
+      nav a:hover {
+        background-color: #b500f1;
+      }
+      .icon {
+        margin-right: 10px;
+      }
+      .home-icon:before {
+        content: "\f015";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+      .about-icon:before {
+        content: "\f129";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+      .services-icon:before {
+        content: "\f013";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+      .contact-icon:before {
+        content: "\f095";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+      }
+      /* Style untuk menu yang aktif */
+      .active-menu {
+        color: #ccac00;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="home.html" target="home" class="home-link"><span class="icon home-icon"></span>Home</a></li>
+        <li><a href="aboutMe.html" target="home" class="about-link"><span class="icon about-icon"></span>About Me</a></li>
+        <li><a href="gallery.html" target="home" class="gallery-link"><span class="icon gallery-icon fa fa-image"></span> Gallery</a></li>
+        <li><a href="news.html" target="home" class="news-link"><span class="icon news-icon fa fa-newspaper"></span>News</a></li>
+        <li><a href="contact.html" target="home" class="contact-link"><span class="icon contact-icon"></span>Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      // Script untuk menambahkan class "active-menu" pada menu yang sedang aktif
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          links.forEach(link => link.classList.remove('active-menu'));
+          this.classList.add('active-menu');
+        })
+      })
+    </script>
+  </body>
+</html>
