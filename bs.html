@@ -1,0 +1,160 @@
+<head>
+  <title>Bible says</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+      overflow: hidden;
+    }
+
+    /* center the blockquote in the page */
+    .blockquote-wrapper {
+      display: flex;
+      height: 100vh;
+      padding: 0 20px;
+    }
+
+    /* Blockquote main style */
+    .blockquote {
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      color: #ffffff;
+      padding: 30px 0;
+      width: 100%;
+      max-width: 500px;
+      z-index: 1;
+      margin: 80px auto;
+      align-self: center;
+      border-top: solid 1px;
+      border-bottom: solid 1px;
+    }
+
+    /* Blockquote header */
+    .blockquote h1 {
+      position: relative;
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1;
+      margin: 0;
+    }
+
+    /* Blockquote right double quotes */
+    .blockquote:after {
+      position: absolute;
+      content: "”";
+      color: rgba(255, 255, 255, 1);
+      font-size: 10rem;
+      line-height: 0;
+      bottom: -43px;
+      right: 30px;
+    }
+
+    /* increase header size after 600px */
+    @media all and (min-width: 600px) {
+      .blockquote h1 {
+        font-size: 60px;
+      }
+    }
+
+    /* Blockquote subheader */
+    .blockquote h4 {
+      position: relative;
+      color: #292a2b;
+      font-size: 1.4rem;
+      font-weight: normal;
+      line-height: 1;
+      margin: 0;
+      padding-top: 20px;
+      z-index: 1;
+      font-size: 20px;
+    }
+
+    /* Button style */
+    button {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      background-color: #ffffff;
+      color: #52ACFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="blockquote-wrapper">
+    <div class="blockquote">
+      <h1 id="quote-text"></h1>
+      <h4 id="quote-author"></h4>
+      <button id="new-quote-btn">More</button>
+    </div>
+</div>
+<script>
+const quotes = [
+  {
+    quote: "Biarlah yang lain dipuji, tetapi jangan engkau sendiri memuji dirimu.",
+    author: "2 Korintus 10:18"
+  },
+  {
+    quote: "Sebab Ia memberikan makan kepada mereka yang lapar, dan mengenyangkan jiwa orang yang kelaparan.",
+    author: "Mazmur 107:9"
+  },
+  {
+    quote: "Sesungguhnya, dengan bersukacita kamu akan keluar, dan dengan damai sejahtera kamu akan dipimpin. Bukit dan bukit batu akan berteriak-teriak memuji kamu, dan segala pohon di padang akan menepuk tangan.",
+    author: "Yesaya 55:12"
+  },
+  {
+    quote: "Tetapi orang yang sabar mendapat penghargaan yang besar.",
+    author: "Amsal 3:35"
+  },
+  {
+    quote: "Aku bersorak-sorai dalam menghadapi Allah, aku bersukacita dalam menghadapi Allah yang menyelamatkan aku.",
+    author: "Habakuk 3:18"
+  },
+  {
+    quote: "Berbahagialah orang yang menanggung pencobaan, karena apabila ia tahan uji, ia akan menerima mahkota kehidupan yang dijanjikan Allah kepada orang yang mengasihi Dia.",
+    author: "Yakobus 1:12"
+  },
+  {
+    quote: "Karena itu janganlah kuatir tentang hari besok, karena hari besok akan kuatir tentang dirinya sendiri. Setiap hari mempunyai kesusahannya sendiri.",
+    author: "Matius 6:34"
+  },
+  {
+    quote: "Segala sesuatu adalah mungkin bagi orang yang percaya.",
+    author: "Markus 9:23"
+  }
+];
+
+function generateQuote() {
+  // Get a random index from the quotes array
+  const index = Math.floor(Math.random() * quotes.length);
+  
+  // Get the quote object at the given index
+  const quoteObj = quotes[index];
+  
+  // Update the quote text and author in the HTML
+  const quoteText = document.querySelector("#quote-text");
+  const quoteAuthor = document.querySelector("#quote-author");
+  quoteText.innerHTML = `“${quoteObj.quote}”`;
+  quoteText.style.fontSize = "30px";
+  quoteAuthor.innerHTML = `&mdash; ${quoteObj.author}`;
+  quoteAuthor.style.fontSize = "20px";
+}
+
+// Get the "New Quote" button element and add a click event listener to it
+const newQuoteBtn = document.querySelector("#new-quote-btn");
+newQuoteBtn.addEventListener("click", generateQuote);
+
+// Generate a quote when the page loads
+generateQuote();
+
+
+</script>
+</body>
+</html>

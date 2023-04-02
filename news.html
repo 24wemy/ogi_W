@@ -1,121 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Berita</title>
+<html>
+  <head>
+    <title>news</title>
     <style>
+      /* Gaya untuk tag <body> */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
+      }
+
+      /* Gaya untuk tag <h1> */
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      /* Gaya untuk tag <h2> */
+      h2 {
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      /* Gaya untuk tag <iframe> */
+      iframe {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+      }
+
+      /* Gaya untuk tag <p> */
+      p {
+        text-align: justify;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        
+      }
+
+      /* Gaya untuk class .berita */
+      .berita {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        border: 3px solid #ebc906;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      /* Gaya untuk membuat halaman dapat di-zoom */
+      @media screen and (min-width: 600px) {
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            color: #444;
-            line-height: 1.6;
+          font-size: 18px;
         }
-        
-        header {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            font-size: 36px;
-            font-weight: 700;
-            margin: 0;
-        }
-        
-        main {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        article {
-            margin-bottom: 40px;
-        }
-        
-        h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin: 0 0 10px;
-        }
-        
-        p {
-            font-size: 16px;
-            margin: 0 0 20px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        
-        .read-more {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .read-more a {
-            color: #fff;
-            background-color: #428bca;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        
-        .read-more a:hover {
-            background-color: #3071a9;
-        }
-        
-        footer {
-            background-color: #f7f7f7;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            color: #999;
-            margin-top: 40px;
+      }
 
+      @media screen and (min-width: 800px) {
+        body {
+          font-size: 20px;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        body {
+          font-size: 22px;
+        }
+      }
     </style>
-</head>
-<body>
-    <header>
-        <h1 style="font-size: 50px; color: green; font-weight: bold; font-family: Calbri; border-bottom: 4px solid #333; padding-bottom: 10px;">Halaman Berita</h1>
-    </header>
-    <main>
-        <article>
-            <h2 style="font-size: 40px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Eksotisme Pulau Banda Naira di Maluku, Destinasi Wisata yang Wajib Dikunjungi</h2>
-            <p style="font-weight: bold;">Timur indonesia | Maluku</p>
-            <img src="img/banda.jpg" alt="Gambar Berita">
-            <p style="font-weight: bold; font-size: 15px;">Keindahan benteng dan pulau banda dari atas</p>
-            <p style="font-size: 20px;"> Indonesia kaya akan keindahan alamnya. Salah satu destinasi wisata alam yang menarik adalah Pulau Banda Naira di Maluku. Terletak di tengah Laut Banda, pulau ini menawarkan pemandangan yang memesona dan keindahan yang tiada tara.</p>
-            <p style="font-size: 20px;"> Pulau Banda Naira memiliki keindahan alam yang masih asli dan terjaga dengan baik. Di sana, wisatawan dapat menikmati panorama indah dari pantai berpasir putih yang memikat hati. Terumbu karang yang mempesona juga dapat dilihat dengan jelas dari pantai, dengan keberagaman ikan dan terumbu karang yang menawan.</p>
-            <div class="read-more">
-                <a href="#" id="read-more-link">Read more</a>
-</div>
-<div id="additional-content" style="display: none;">
-<p style="font-size: 20px;"> Selain itu, wisatawan dapat mengunjungi gunung berapi Banda Api yang ada di Pulau Banda Besar. Gunung ini memiliki keindahan yang sangat menakjubkan, terutama saat matahari terbit dan tenggelam. Di sekitar gunung juga terdapat kebun pala yang menjadi sumber kekayaan masyarakat Banda Naira.</p>
-<p style="font-size: 20px;"> Tidak hanya keindahan alamnya saja yang menarik, Pulau Banda Naira juga memiliki sejarah yang sangat kaya. Pulau ini menjadi pusat perdagangan rempah-rempah di Indonesia pada masa lalu. Di sana, wisatawan dapat mengunjungi Benteng Belgica, bekas benteng peninggalan masa penjajahan Belanda yang masih berdiri kokoh hingga saat ini.</p>
-<p style="font-size: 20px;">Bagi para pecinta wisata kuliner, Pulau Banda Naira juga menawarkan masakan khas Maluku yang sangat lezat. Rempah-rempah yang dihasilkan dari pulau ini membuat masakan yang disajikan memiliki cita rasa yang khas dan autentik.</p>
-<p style="font-size: 20px;">Jadi, bagi Anda yang ingin merasakan keindahan alam, sejarah dan kekayaan kuliner Indonesia, Pulau Banda Naira di Maluku adalah tempat yang harus dikunjungi.</p>
-</div>
-</article>
-</main>
-<footer>
-© Ogi wemy | News
-</footer>
+  </head>
+  <body>
+    <h1>ARTIFICIAL INTELLIGENCE</h1>
+    <div class="berita">
+      <h2>Elon Musk, tech experts call for pause on AI development</h2>
+      <video width="750" height="450" controls>
+        <source src="video/NEWS1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>In an open letter citing risks to society, Elon Musk and a group of artificial intelligence experts and industry executives are calling for a six-month pause in developing systems more powerful than OpenAI's newly launched GPT-4. Some experts in Canada are also putting their name on that list.</p>
+    </div>
+    <div class="berita">
+      <h2>AI technology may be able to generate our mind’s images</h2>
+      <video width="750" height="450" controls>
+        <source src="video/NEWS3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Researchers are developing artificial intelligence technology they say generate the very images in our brains. NBC News’ Jacob Ward shares more on the extraordinary research and the concerns about what mind reading technology could mean for the future.</p>
+    </div>
+    <div class="berita">
+      <h2>'Profound risk to society': Biggest names in tech push alarm button over rapid rise of AI</h2>
+      <video width="750" height="450" controls>
+        <source src="video/NEWS2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p> Some of the biggest names in technology have pushed the alarm button over the rise of Artificial Intelligence, saying it could pose a "profound risk to society and humanity".</p>
+    </div>
 <script>
-    const readMoreLink = document.getElementById('read-more-link');
-    const additionalContent = document.getElementById('additional-content');
-
-    readMoreLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        additionalContent.style.display = 'block';
-        readMoreLink.style.display = 'none';
-    });
+  const video = document.querySelector('video');
+  video.addEventListener('click', () => {
+    if(video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
 </script>
 </body>
 </html>
